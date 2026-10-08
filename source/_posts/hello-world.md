@@ -8,9 +8,24 @@ categories:
   - 随笔
 description: 博客搭好了！这篇文章演示了常用的写作功能，也是以后写文章的速查表。
 mathjax: true
+published: false
 ---
 
 博客搭好了！这篇文章演示常用功能，写文章时可以回来对照。
+
+> 这篇文章开头写了 `published: false`，所以是隐藏的：网站上看不到，只有本地运行 `npx hexo server --draft` 才能看到。
+
+## 隐藏和排序
+
+文章开头加这两行就行：
+
+```yaml
+published: false   # 隐藏：网站上不显示（本地 --draft 预览能看到）
+sticky: 10         # 置顶：数字越大越靠前，不写就按日期从新到旧
+```
+
+- 想重新公开：把 `false` 改回 `true`（或者删掉这一行）
+- 想取消置顶：删掉 `sticky` 那一行，或者留空
 
 ## 发一篇新文章
 
