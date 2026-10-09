@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai   # 让文章日期和网址按北京时间生成，与本地一致
     steps:
       - uses: actions/checkout@v4
         with:
